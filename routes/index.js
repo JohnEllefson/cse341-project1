@@ -1,10 +1,7 @@
-// Import the necessary modules
-const routes = require('express').Router();
-const lesson1Controller = require('../controllers/lesson1');
+const express = require('express');
+const router = express.Router();
 
-// Define routes
-routes.get('/', lesson1Controller.maryRoute);
-routes.get('/rob', lesson1Controller.robRoute);
-routes.get('/dan', lesson1Controller.danRoute);
+// Mount a sub-router to handle all routes under /contacts
+router.use('/contacts', require('./contacts'))
 
-module.exports = routes;
+module.exports = router;
