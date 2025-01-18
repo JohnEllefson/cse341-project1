@@ -20,3 +20,21 @@ GET http://localhost:8080/contacts/6789ad0c1833e88125af5c9a
 ##########################################
 
 // Remote host: request all contacts
+
+GET https://cse341-project1-psa4.onrender.com/contacts/
+
+###
+// Local host: request Darrel Bowman contact
+GET https://cse341-project1-psa4.onrender.com/contacts/6789ac551833e88125af5c94
+
+###
+// Local host: request Tammy Wenzel contact
+GET https://cse341-project1-psa4.onrender.com/contacts/6789ac9a1833e88125af5c96
+
+###
+// Local host: request Richard Miller contact
+GET https://cse341-project1-psa4.onrender.com/contacts/6789acd31833e88125af5c98
+
+###
+// Local host: request Millie Tohey contact
+GET https://cse341-project1-psa4.onrender.com/contacts/6789ad0c1833e88125af5c9a

@@ -26,19 +26,6 @@ const server = app.listen(port, async (req, res) => {
   }
 });
 
-// // Graceful shutdown on termination signals
-// const cleanUp = () => {
-//     console.log('Closing server...');
-//     server.close(() => {
-//         console.log('Server closed');
-//         process.exit(0);
-//     });
-// };
-
-// // Listen for termination signals
-// process.on('SIGINT', cleanUp); // Ctrl+C
-// process.on('SIGTERM', cleanUp); // Termination signal
-
 // Graceful shutdown on Nodemon restarts
 process.once('SIGUSR2', () => {
     console.log('Nodemon restart detected. Closing server...');
