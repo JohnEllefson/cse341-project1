@@ -1,27 +1,31 @@
-require('dotenv').config(); // Load environment variables
-const { MongoClient } = require('mongodb');
+'use strict';
 
-const uri = process.env.MONGODB_URI; // Load the connection string from .env
-const client = new MongoClient(uri);
+// Import the required modules
+const mongoose = require('mongoose');
 
+// Load the connection string from .env
+const uri = process.env.MONGODB_URI;
+
+// Create a database object to store the connection
 let db;
 
-async function connectToDatabase() {
-    try {
-        if (!db) {
-            await client.connect(); // Establish a connection
-            console.log('Connected to MongoDB!');
-            db = client.db(); // Default database from the URI
-        }
-        return db;
-    } catch (error) {
-        console.error('Failed to connect to MongoDB:', error);
-        throw error;
+// Connect to MongoDB using Mongoose
+async function connectMongoose() {
+  try {
+    if (!db) {
+      await mongoose.connect(uri);
+      db = mongoose.connection;
+      console.log('Connected to MongoDB using Mongoose!');
     }
-};
+  } catch (error) {
+    console.error('Failed to connect to MongoDB using Mongoose:', error);
+    throw error;
+  }
+}
 
+// Return the database object
 function getDb() {
-    return db;
-};
+  return db;
+}
 
-module.exports = { connectToDatabase, getDb };
+module.exports = { connectMongoose, getDb };

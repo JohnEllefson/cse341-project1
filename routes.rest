@@ -1,0 +1,129 @@
+##############################################################
+// Local host: request all contacts
+GET http://localhost:8080/contacts/ HTTP/1.1
+
+
+
+##############################################################
+// Local host: request Darrel Bowman contact
+GET http://localhost:8080/contacts/6789ac551833e88125af5c94 HTTP/1.1
+
+
+
+##############################################################
+// Local host: create a new contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Zachary",
+  "lastName": "Quinn",
+  "email": "zak.quinn@aol.com",
+  "favoriteColor": "Orange",
+  "birthday": "2004-07-12"
+}
+
+
+
+##############################################################
+// Local host: request all contacts to show that Zachary Quinn was added
+GET http://localhost:8080/contacts/ HTTP/1.1
+
+
+
+##############################################################
+// Local host: update the Zachary Quinn contact
+PUT http://localhost:8080/contacts/67904acf6184685691cf112a HTTP/1.1
+content-type: application/json
+
+{
+  "email": "zak.quinn@google.com",
+  "favoriteColor": "Red"
+}
+
+
+
+##############################################################
+// Local host: request all contacts to show that Zachary Quinn was updated
+GET http://localhost:8080/contacts/ HTTP/1.1
+
+
+
+##############################################################
+// Local host: delete the Zachary Quinn contact
+DELETE http://localhost:8080/contacts/67904acf6184685691cf112a HTTP/1.1
+
+
+
+##############################################################
+// Local host: request all contacts to show that Zachary Quinn was deleted
+GET http://localhost:8080/contacts/ HTTP/1.1
+
+
+
+// ************************************************************************************************
+###################################################################################################
+###################################################################################################
+###################################################################################################
+// ************************************************************************************************
+
+
+// Remote host: request all contacts
+GET https://cse341-project1-psa4.onrender.com/contacts HTTP/1.1
+
+
+
+##############################################################
+// Remote host: request Darrel Bowman contact
+GET https://cse341-project1-psa4.onrender.com/contacts/6789ac551833e88125af5c94 HTTP/1.1
+
+
+
+##############################################################
+// Remote host: create a new contact
+POST https://cse341-project1-psa4.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Zachary",
+  "lastName": "Quinn",
+  "email": "zak.quinn@aol.com",
+  "favoriteColor": "Orange",
+  "birthday": "2004-07-12"
+}
+
+
+
+##############################################################
+// Remote host: request all contacts to show that Zachary Quinn was added
+GET https://cse341-project1-psa4.onrender.com/contacts/ HTTP/1.1
+
+
+
+##############################################################
+// Remote host: update the Zachary Quinn contact
+PUT https://cse341-project1-psa4.onrender.com/contacts/67902fee00818639208e7e66 HTTP/1.1
+content-type: application/json
+
+{
+  "email": "zak.quinn@google.com",
+  "favoriteColor": "Red"
+}
+
+
+
+##############################################################
+// Remote host: request all contacts to show that Zachary Quinn was updated
+GET https://cse341-project1-psa4.onrender.com/contacts/ HTTP/1.1
+
+
+
+##############################################################
+// Remote host: delete the Zachary Quinn contact
+DELETE https://cse341-project1-psa4.onrender.com/contacts/67902fee00818639208e7e66 HTTP/1.1
+
+
+
+##############################################################
+// Remote host: request all contacts to show that Zachary Quinn was deleted
+GET https://cse341-project1-psa4.onrender.com/contacts/ HTTP/1.1
