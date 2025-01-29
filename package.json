@@ -1,12 +1,13 @@
 {
-  "name": "cse341-project1",
+  "name": "cse341-week1",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "swagger": "node ./swagger.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,12 @@
   "homepage": "https://github.com/JohnEllefson/cse341-project1#readme",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongodb": "^6.12.0",
-    "mongoose": "^8.9.5"
+    "mongoose": "^8.9.5",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",
@@ -36,6 +39,7 @@
     "eslint-plugin-prettier": "^5.2.3",
     "globals": "^15.14.0",
     "nodemon": "^3.1.9",
-    "prettier": "^3.4.2"
+    "prettier": "^3.4.2",
+    "swagger-autogen": "^2.23.7"
   }
 }

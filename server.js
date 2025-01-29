@@ -3,14 +3,18 @@
 // Import the required modules
 require('dotenv').config(); // This must load before other modules
 const express = require('express');
-const bodyParser = require('body-parser');
+const cors = require('cors');
 const mongodb = require('./db/connect');
 
 const app = express();
 const port = process.env.PORT || 8080;
 
-// Mount the body-parser middleware to parse the incoming request body
-app.use(bodyParser.json());
+// Mount the CORS middleware to allow requests from any origin
+app.use(cors());
+
+// Mount the body parsing middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // All incoming requests will have the response headers set to allow all origins
 app.use('/', (_req, res, next) => {

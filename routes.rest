@@ -33,7 +33,7 @@ GET http://localhost:8080/contacts/ HTTP/1.1
 
 ##############################################################
 // Local host: update the Zachary Quinn contact
-PUT http://localhost:8080/contacts/67904acf6184685691cf112a HTTP/1.1
+PUT http://localhost:8080/contacts/67903423f537b5d6fc6c3e31 HTTP/1.1
 content-type: application/json
 
 {
@@ -51,7 +51,7 @@ GET http://localhost:8080/contacts/ HTTP/1.1
 
 ##############################################################
 // Local host: delete the Zachary Quinn contact
-DELETE http://localhost:8080/contacts/67904acf6184685691cf112a HTTP/1.1
+DELETE http://localhost:8080/contacts/67903423f537b5d6fc6c3e31 HTTP/1.1
 
 
 
@@ -69,19 +69,19 @@ GET http://localhost:8080/contacts/ HTTP/1.1
 
 
 // Remote host: request all contacts
-GET https://cse341-project1-psa4.onrender.com/contacts HTTP/1.1
+GET https://cse341-week1-q8xn.onrender.com/contacts HTTP/1.1
 
 
 
 ##############################################################
 // Remote host: request Darrel Bowman contact
-GET https://cse341-project1-psa4.onrender.com/contacts/6789ac551833e88125af5c94 HTTP/1.1
+GET https://cse341-week1-q8xn.onrender.com/contacts/6789ac551833e88125af5c94 HTTP/1.1
 
 
 
 ##############################################################
 // Remote host: create a new contact
-POST https://cse341-project1-psa4.onrender.com/contacts HTTP/1.1
+POST https://cse341-week1-q8xn.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
@@ -96,13 +96,13 @@ content-type: application/json
 
 ##############################################################
 // Remote host: request all contacts to show that Zachary Quinn was added
-GET https://cse341-project1-psa4.onrender.com/contacts/ HTTP/1.1
+GET https://cse341-week1-q8xn.onrender.com/contacts/ HTTP/1.1
 
 
 
 ##############################################################
 // Remote host: update the Zachary Quinn contact
-PUT https://cse341-project1-psa4.onrender.com/contacts/67904e071c68afd9e10e350c HTTP/1.1
+PUT https://cse341-week1-q8xn.onrender.com/contacts/67902fee00818639208e7e66 HTTP/1.1
 content-type: application/json
 
 {
@@ -114,16 +114,16 @@ content-type: application/json
 
 ##############################################################
 // Remote host: request all contacts to show that Zachary Quinn was updated
-GET https://cse341-project1-psa4.onrender.com/contacts/ HTTP/1.1
+GET https://cse341-week1-q8xn.onrender.com/contacts/ HTTP/1.1
 
 
 
 ##############################################################
 // Remote host: delete the Zachary Quinn contact
-DELETE https://cse341-project1-psa4.onrender.com/contacts/67904e071c68afd9e10e350c HTTP/1.1
+DELETE https://cse341-week1-q8xn.onrender.com/contacts/67902fee00818639208e7e66 HTTP/1.1
 
 
 
 ##############################################################
 // Remote host: request all contacts to show that Zachary Quinn was deleted
-GET https://cse341-project1-psa4.onrender.com/contacts/ HTTP/1.1
+GET https://cse341-week1-q8xn.onrender.com/contacts/ HTTP/1.1

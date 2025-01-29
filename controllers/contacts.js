@@ -70,8 +70,15 @@ const deleteSingle = async (req, res) => {
 // Update a single contact
 const updateSingle = async (req, res) => {
   try {
-    const contact = await Contacts.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    if (!contact) {
+    const contact = {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      favoriteColor: req.body.favoriteColor,
+      birthday: req.body.birthday
+    };
+    const returnContact = await Contacts.findByIdAndUpdate(req.params.id, contact, { new: true });
+    if (!returnContact) {
       res.status(404).json({ message: 'Contact not found' });
       return;
     }
